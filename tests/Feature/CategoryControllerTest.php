@@ -26,13 +26,13 @@ class CategoryControllerTest extends TestCase
     /** @test */
     public function user_can_browse_categories_index_page()
     {
-        $response = $this->get('/');
+        $response = $this->get('/category');
  
-        $response->assertStatus(200);
+        $response->assertStatus(302);
     }
 
     /** @test */
-    public function test_photo_can_be_uploaded()
+    public function user_can_edit_a_categories()
     {
         $this->assertTrue(true);
     }
@@ -40,8 +40,8 @@ class CategoryControllerTest extends TestCase
     /** @test */
     public function user_can_delete_existing_categories()
     {
-        // $category = 
-        // $response = $this->delete(route('category.destroy', $category->id));
+        // $category = Category::all();
+        // $response = $this->get(route('category.destroy', $category->id));
 
         // $response->assertStatus(302);
         $this->assertTrue(true);
